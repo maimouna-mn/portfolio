@@ -2,56 +2,87 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { fadeUp, viewportOnce } from "../motion";
 
+// const PROJECTS = [
+//   {
+//     title: "Space Travel Web Application",
+//     image:
+//       "https://images.unsplash.com/photo-1517976487492-5750f3195933?w=600&q=80",
+//     desc: "Manages spacecraft and planetary transfer bookings with full CRUD operations, dynamic routing, and live API integration.",
+//     tags: [
+//       "React",
+//       "React Router",
+//       "Context API",
+//       "CRUD",
+//       "REST API",
+//       "Responsive Design",
+//     ],
+//     github: "https://github.com/maimouna-mn/space-travel-react",
+//   },
+//   {
+//     title: "Course Management Platform",
+//     image:
+//       "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&q=80",
+//     desc: "Full-stack platform for students and instructors, with bulk enrollment, scheduling, and authentication.",
+//     tags: [
+//       "Angular",
+//       "Laravel",
+//       "Ionic",
+//       "Tailwind CSS",
+//       "REST API",
+//       "Authentication",
+//     ],
+//     github: "https://github.com/maimouna-mn/Course-School-Management-Platform",
+//   },
+//   {
+//     title: "Inter-Network Money Transfer System",
+//     image:
+//       "https://images.unsplash.com/photo-1621504450181-5d356f61d307?w=600&q=80",
+//     desc: "Secure cross-network transfer system with JSON payload validation, RESTful APIs, and database integration.",
+//     tags: ["PHP", "Laravel", "Blade", "Money Transfer", "REST API", "MySQL"],
+//     github:
+//       "https://github.com/maimouna-mn/Inter-Network-Money-Transfer-System",
+//   },
+//   {
+//     title: "Jeopardy Trivia Game",
+//     image:
+//       "https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?w=600&q=80",
+//     desc: "Interactive trivia game inspired by Jeopardy, with dynamic question categories, scoring, and DOM-driven UI logic.",
+//     tags: ["JavaScript", "HTML", "CSS", "DOM", "Fetch API", "Game"],
+//     github: "https://github.com/maimouna-mn/jeopardy-trivia-game",
+//   },
+// ];
 const PROJECTS = [
   {
-    title: "Space Travel Web Application",
-    image:
-      "https://images.unsplash.com/photo-1517976487492-5750f3195933?w=600&q=80",
-    desc: "Manages spacecraft and planetary transfer bookings with full CRUD operations, dynamic routing, and live API integration.",
-    tags: [
-      "React",
-      "React Router",
-      "Context API",
-      "CRUD",
-      "REST API",
-      "Responsive Design",
-    ],
-    github: "https://github.com/maimouna-mn/space-travel-react",
+    title: 'Space Travel Web Application',
+    image: 'https://images.unsplash.com/photo-1517976487492-5750f3195933?w=600&q=80',
+    desc: 'Manages spacecraft and planetary transfer bookings with full CRUD operations, dynamic routing, and live API integration.',
+    tags: ['React.js', 'React Router', 'Context API'],
+    github: 'https://github.com/maimouna-mn/space-travel-react',
+    demo: 'https://space-travel-react-wine.vercel.app/',
   },
   {
-    title: "Course Management Platform",
-    image:
-      "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&q=80",
-    desc: "Full-stack platform for students and instructors, with bulk enrollment, scheduling, and authentication.",
-    tags: [
-      "Angular",
-      "Laravel",
-      "Ionic",
-      "Tailwind CSS",
-      "REST API",
-      "Authentication",
-    ],
-    github: "https://github.com/maimouna-mn/Course-School-Management-Platform",
+    title: 'Course Management Platform',
+    image: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&q=80',
+    desc: 'Full-stack platform for students and instructors, with bulk enrollment, scheduling, and authentication.',
+    tags: ['Angular', 'Laravel', 'Ionic', 'Tailwind'],
+    github: 'https://github.com/maimouna-mn/Course-School-Management-Platform',
   },
   {
-    title: "Inter-Network Money Transfer System",
-    image:
-      "https://images.unsplash.com/photo-1621504450181-5d356f61d307?w=600&q=80",
-    desc: "Secure cross-network transfer system with JSON payload validation, RESTful APIs, and database integration.",
-    tags: ["PHP", "Laravel", "Blade", "Money Transfer", "REST API", "MySQL"],
-    github:
-      "https://github.com/maimouna-mn/Inter-Network-Money-Transfer-System",
+    title: 'Inter-Network Money Transfer System',
+    image: 'https://images.unsplash.com/photo-1621504450181-5d356f61d307?w=600&q=80',
+    desc: 'Secure cross-network transfer system with JSON payload validation, RESTful APIs, and database integration.',
+    tags: ['Node.js', 'NestJS', 'MySQL'],
+    github: 'https://github.com/maimouna-mn/Inter-Network-Money-Transfer-System',
   },
   {
-    title: "Jeopardy Trivia Game",
-    image:
-      "https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?w=600&q=80",
-    desc: "Interactive trivia game inspired by Jeopardy, with dynamic question categories, scoring, and DOM-driven UI logic.",
-    tags: ["JavaScript", "HTML", "CSS", "DOM", "Fetch API", "Game"],
-    github: "https://github.com/maimouna-mn/jeopardy-trivia-game",
+    title: 'Jeopardy Trivia Game',
+    image: 'https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?w=600&q=80',
+    desc: 'Interactive trivia game inspired by Jeopardy, with dynamic question categories, scoring, and DOM-driven UI logic.',
+    tags: ['JavaScript'],
+    github: 'https://github.com/maimouna-mn/jeopardy-trivia-game',
+    demo: 'https://jeopardy-trivia-game.vercel.app/',
   },
-];
-
+]
 const VISIBLE_COUNT = 3;
 
 export default function Projects() {
@@ -136,6 +167,9 @@ export default function Projects() {
                     <div className="project-links">
                       <a href={project.github} target="_blank" rel="noreferrer">
                         GitHub ↗
+                      </a>
+                      <a href="#" target="_blank" rel="noreferrer">
+                        Live demo ↗
                       </a>
                     </div>
                   </div>
