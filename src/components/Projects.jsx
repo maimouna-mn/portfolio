@@ -69,6 +69,15 @@ const PROJECTS = [
     demo: "https://space-travel-react-wine.vercel.app/",
   },
   {
+    title: "Jeopardy Trivia Game",
+    image:
+      "https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?w=600&q=80",
+    desc: "Interactive trivia game inspired by Jeopardy, with dynamic question categories, scoring, and DOM-driven UI logic.",
+    tags: ["JavaScript", "HTML", "CSS", "DOM", "API", "Trivia Game"],
+    github: "https://github.com/maimouna-mn/jeopardy-trivia-game",
+    demo: "https://jeopardy-trivia-game.vercel.app/",
+  },
+  {
     title: "Course Management Platform",
     image:
       "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&q=80",
@@ -98,16 +107,7 @@ const PROJECTS = [
 ],
     github:
       "https://github.com/maimouna-mn/Inter-Network-Money-Transfer-System",
-  },
-  {
-    title: "Jeopardy Trivia Game",
-    image:
-      "https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?w=600&q=80",
-    desc: "Interactive trivia game inspired by Jeopardy, with dynamic question categories, scoring, and DOM-driven UI logic.",
-    tags: ["JavaScript", "HTML", "CSS", "DOM", "API", "Trivia Game"],
-    github: "https://github.com/maimouna-mn/jeopardy-trivia-game",
-    demo: "https://jeopardy-trivia-game.vercel.app/",
-  },
+  }
 ];
 const VISIBLE_COUNT = 3;
 
