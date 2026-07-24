@@ -63,7 +63,7 @@ export default function Header() {
           ))}
         </ul>
         <div className="nav-right">
-          <a href="#" className="btn btn-primary desktop-only">
+          <a href="/cv-maimouna-ndiaye.pdf" className="btn btn-primary desktop-only">
             ↓ Download CV
           </a>
           <button

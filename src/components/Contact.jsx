@@ -19,7 +19,7 @@ export default function Contact() {
               Dallas, remote, or contract. If you have something worth
               building, I'd like to hear about it.
             </p>
-            <a href="#" className="btn btn-primary">
+            <a href="/cv-maimouna-ndiaye.pdf" className="btn btn-primary">
               ↓ Download CV
             </a>
           </div>
