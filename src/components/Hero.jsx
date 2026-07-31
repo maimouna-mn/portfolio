@@ -63,7 +63,7 @@ export default function Hero() {
             </span>
           </div>
           <div className="hero-actions">
-            <a href="/cv-maimouna-ndiaye.pdf" className="btn btn-primary">
+            <a href="/Maimouna_Ndiaye_Resume.pdf" className="btn btn-primary">
               ↓ Download CV
             </a>
             <a
