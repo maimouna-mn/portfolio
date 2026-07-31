@@ -1,12 +1,12 @@
-import { motion } from 'framer-motion'
-import { fadeUp, viewportOnce } from '../motion'
+import { motion } from "framer-motion";
+import { fadeUp, viewportOnce } from "../motion";
 
 const STATS = [
-  { k: 'Professional dev experience', v: '~1 year' },
-  { k: 'Languages', v: 'English / French' },
-  { k: 'Working style', v: 'On-site preferred, Remote ' },
-  { k: 'Currently', v: 'Open to contract + FT roles' },
-]
+  { k: "Professional dev experience", v: "~1 year" },
+  { k: "Languages", v: "English / French" },
+  { k: "Working style", v: "On-site preferred, Remote" },
+  { k: "Currently", v: "Open to contract + FT roles" },
+];
 
 export default function About() {
   return (
@@ -24,6 +24,7 @@ export default function About() {
             <h2 className="section-title">Why I build</h2>
           </div>
         </motion.div>
+
         <motion.div
           className="about-grid"
           variants={fadeUp}
@@ -34,26 +35,28 @@ export default function About() {
           <div>
             <p className="about-lede">
               I got into development because I enjoyed turning problems into
-              working solutions — and I've never lost that excitement.
+              working solutions, and I've never lost that excitement.
             </p>
+
             <div className="about-body">
               <p>
-                My path went through Université Cheikh Anta Diop, ISI Dakar,
-                and ESIA before a career-track program sharpened it into
-                full-stack practice. Since then I've worked across backend
-                contracts and a remote internship, building the habit of
-                asking "does this actually hold up" before calling something
-                done.
+                <p>
+                  My path into software development grew through hands-on
+                  projects, real-world experience, and a career-focused
+                  full-stack program. Since then, I've strengthened my backend
+                  development skills while working with professional development
+                  teams.
+                </p>
               </p>
               <p>
-                I'm upfront about where my experience is deep and where it
-                isn't — I've got real, hands-on time with REST APIs, JWT auth,
-                and CI/CD pipelines; I'm still building depth in dedicated
-                A/B-testing tooling, and I'd rather say that than pad a
-                resume.
+                I've gained hands-on experience with REST APIs and JWT
+                authentication. I enjoy continuously expanding my skills by
+                working with new technologies and taking on real-world
+                challenges.
               </p>
             </div>
           </div>
+
           <div className="stat-list">
             {STATS.map((stat) => (
               <div className="stat-row" key={stat.k}>
@@ -65,5 +68,5 @@ export default function About() {
         </motion.div>
       </div>
     </section>
-  )
+  );
 }

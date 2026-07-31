@@ -23,10 +23,6 @@ const SKILL_GROUPS = [
     skills: ['MySQL', 'Firebase', 'SQL Server'],
   },
   {
-    category: 'AI Tools',
-    skills: ['ChatGPT', 'Claude', 'Lovable'],
-  },
-  {
     category: 'Developer Tools',
     skills: [
       'Git',
@@ -44,6 +40,16 @@ const SKILL_GROUPS = [
     category: 'Methodologies',
     skills: ['Agile / Scrum', 'MVC Architecture', 'RBAC', 'SDLC'],
   },
+   {
+  category: "Interests",
+  skills: [
+    "Personal Development",
+    "Reading",
+    "Scrabble",
+    "Travel",
+    "Entrepreneurship",
+  ],
+},
 ]
 
 export default function Skills() {

@@ -1,9 +1,10 @@
 import { motion } from 'framer-motion'
 import { fadeUp, viewportOnce } from '../motion'
+import { desc } from 'framer-motion/client'
 
 const LOG_ENTRIES = [
   {
-    date: (
+  date: (
       <>
         Jul 2026
         <br />— Present
@@ -12,8 +13,8 @@ const LOG_ENTRIES = [
     version: 'CURRENT',
     title: 'Junior Full-Stack Developer',
     company: 'Velocity Money · Part-time · Remote',
-    desc: 'Rejoined to support technical continuity of a React/NestJS/Flutter mobile app, coordinating across Mobile and Backend teams. Build technical documentation covering architecture, API integrations, deployment, and CI/CD workflows. Support Mobile Money partner API integrations, including authentication flows, and participate in testing before production releases.',
-    tags: ['React', 'NestJS', 'Flutter', 'API Integration', 'CI/CD', 'Technical Documentation'],
+    desc: 'Develop and integrate the React-based back-office admin panel with a Spring Boot (Java) backend for a mobile money platform, implementing JWT authentication flows, dashboard analytics, and transaction management features. Coordinate across Mobile (Flutter) and Backend teams to ensure API contract consistency, and author technical documentation covering system architecture, API integrations, and deployment workflows.',
+    tags: ['React', 'Spring Boot', 'Java', 'REST APIs', 'JWT', 'Docker', 'Swagger'],
   },
   {
     date: (
@@ -25,23 +26,22 @@ const LOG_ENTRIES = [
     version: 'v3.0.0',
     title: 'Fulfillment Associate',
     company: 'Amazon · Dallas, TX',
-    desc: 'Maintaining high accuracy and quality standards in a fast-paced operational environment while job-searching for developer roles — attention to detail carries over directly.',
-    tags: [],
+    desc: "Maintain high accuracy and quality standards in a fast-paced operational environment while continuing to develop my technical skills and pursue software engineering opportunities.",    tags: [],
   },
   {
     date: (
       <>
         Jan 2024
-        <br />— Jan 2025
+        <br />—  Jun 2024 
       </>
     ),
     version: 'v2.0.0 · ⇄ concurrent',
-    title: 'Full-Stack Engineer',
-    company: 'Velocity Money · Full-time · Dakar, Remote',
-    desc: 'Designed, developed, and maintained RESTful APIs with Node.js and NestJS following MVC architecture, and implemented JWT authentication with role-based access control (RBAC). Integrated relational databases with JSON schema validation, and collaborated in Agile/Scrum using GitLab and Trello for version control and sprint tracking, coordinating with the team via Discord across the full SDLC.',
-    tags: ['Node.js', 'NestJS', 'JWT / RBAC', 'GitLab', 'Trello', 'Discord'],
+    title: 'Junior BackEnd Developer',
+    company: 'Velocity Money · Part-time · Dakar, Remote',
+    desc: 'Designed, developed, and maintained RESTful APIs with Node.js and NestJS following MVC architecture, and implemented JWT authentication with role-based access control (RBAC). Integrated relational databases with JSON schema validation, and collaborated in Agile/Scrum using GitLab for version control and sprint tracking, coordinating with the team via Discord across the full SDLC.',
+    tags: ['Node.js', 'NestJS', 'JWT / RBAC', 'GitLab', 'Discord'],
   },
-  {
+ {
     date: (
       <>
         Jan 2024
@@ -49,16 +49,17 @@ const LOG_ENTRIES = [
       </>
     ),
     version: 'v1.0.0 · ⇄ concurrent',
-    title: 'Back End Developer',
-    company: 'Kwiku SAS · Internship · Dakar Region, Senegal, Remote',
-    desc: "Developed backend features using NestJS and integrated with the team's Flutter mobile app, validated JSON data flows, and troubleshot formatting issues in CI/CD pipelines. Implemented Firebase authentication and database integration, tracked work in Jira and GitHub, and coordinated daily with the team via Slack.",
-    tags: ['NestJS', 'Flutter', 'Firebase', 'Jira', 'GitHub', 'Slack'],
+    title: 'Junior BackEnd Developer',
+    company: 'Kwiku SAS · Full-time · Dakar Region, Senegal, Remote',
+    desc:"Developed backend APIs using NestJS to support integration with the team's Flutter mobile application. Documented and tested API endpoints using Swagger and Postman. Implemented Firebase authentication with OTP verification and integrated Mobile Money payment partners, including Orange Money and Wave. Tracked work in Jira and GitHub and collaborated with the team through Slack.",
+    tags: ['NestJS', 'Firebase', 'OTP', 'Postman', 'Swagger', 'Jira', 'GitHub', 'Slack'],
   },
 ]
 
 export default function Experience() {
   return (
     <section id="experience">
+      
       <div className="wrap">
         <motion.div
           className="section-head"

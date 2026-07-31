@@ -108,6 +108,7 @@
         height: 2px;
         background: var(--blueprint);
       }
+      
       .nav-right {
         display: flex;
         align-items: center;
@@ -244,10 +245,11 @@
 
       .eyebrow {
         font-family: "JetBrains Mono", monospace;
-        font-size: 12.5px;
+        font-size: 16px;
         color: var(--blueprint-dark);
-        letter-spacing: 0.08em;
+        letter-spacing: 0.02em;
         margin: 0 0 14px;
+        font-weight: 800;
       }
       h1.name {
         font-family: "Fraunces", serif;
@@ -786,4 +788,16 @@
         flex-wrap: wrap;
         gap: 8px;
       }
-    
+    .log-desc {
+  text-align: justify;
+  text-align-last: left;
+  line-height: 1.7;
+  hyphens: auto;
+}
+
+@media (max-width: 600px) {
+  .log-desc {
+    text-align: left;
+    hyphens: none;
+  }
+}

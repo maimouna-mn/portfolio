@@ -2,69 +2,21 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { fadeUp, viewportOnce } from "../motion";
 
-// const PROJECTS = [
-//   {
-//     title: "Space Travel Web Application",
-//     image:
-//       "https://images.unsplash.com/photo-1517976487492-5750f3195933?w=600&q=80",
-//     desc: "Manages spacecraft and planetary transfer bookings with full CRUD operations, dynamic routing, and live API integration.",
-//     tags: [
-//       "React",
-//       "React Router",
-//       "Context API",
-//       "CRUD",
-//       "REST API",
-//       "Responsive Design",
-//     ],
-//     github: "https://github.com/maimouna-mn/space-travel-react",
-//   },
-//   {
-//     title: "Course Management Platform",
-//     image:
-//       "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&q=80",
-//     desc: "Full-stack platform for students and instructors, with bulk enrollment, scheduling, and authentication.",
-//     tags: [
-//       "Angular",
-//       "Laravel",
-//       "Ionic",
-//       "Tailwind CSS",
-//       "REST API",
-//       "Authentication",
-//     ],
-//     github: "https://github.com/maimouna-mn/Course-School-Management-Platform",
-//   },
-//   {
-//     title: "Inter-Network Money Transfer System",
-//     image:
-//       "https://images.unsplash.com/photo-1621504450181-5d356f61d307?w=600&q=80",
-//     desc: "Secure cross-network transfer system with JSON payload validation, RESTful APIs, and database integration.",
-//     tags: ["PHP", "Laravel", "Blade", "Money Transfer", "REST API", "MySQL"],
-//     github:
-//       "https://github.com/maimouna-mn/Inter-Network-Money-Transfer-System",
-//   },
-//   {
-//     title: "Jeopardy Trivia Game",
-//     image:
-//       "https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?w=600&q=80",
-//     desc: "Interactive trivia game inspired by Jeopardy, with dynamic question categories, scoring, and DOM-driven UI logic.",
-//     tags: ["JavaScript", "HTML", "CSS", "DOM", "Fetch API", "Game"],
-//     github: "https://github.com/maimouna-mn/jeopardy-trivia-game",
-//   },
-// ];
 const PROJECTS = [
   {
     title: "Space Travel Web Application",
     image:
       "https://images.unsplash.com/photo-1517976487492-5750f3195933?w=600&q=80",
-    desc: "Manages spacecraft and planetary transfer bookings with full CRUD operations, dynamic routing, and live API integration.",
-   tags: [
-  "React",
-  "React Router",
-  "Context API",
-  "CRUD",
-  "REST API",
-  "Responsive Design"
-],
+    desc: "A space travel management application that allows users to build and manage spacecraft, view planetary populations, and transfer spacecraft between planets. Features full CRUD functionality, dynamic routing, form validation, Context API state management, and a mock API backed by local storage.",
+    tags: [
+      "React",
+      "React Router",
+      "Context API",
+      "CRUD",
+      "Mock API",
+      "Local Storage",
+      "Responsive Design",
+    ],
     github: "https://github.com/maimouna-mn/space-travel-react",
     demo: "https://space-travel-react-wine.vercel.app/",
   },
@@ -72,7 +24,7 @@ const PROJECTS = [
     title: "Jeopardy Trivia Game",
     image:
       "https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?w=600&q=80",
-    desc: "Interactive trivia game inspired by Jeopardy, with dynamic question categories, scoring, and DOM-driven UI logic.",
+    desc:"An interactive trivia game inspired by Jeopardy that fetches categories, questions, and answers from a live API. Features dynamic DOM updates, scoring logic, responsive gameplay, and interactive question-and-answer states built with JavaScript, HTML, and CSS.",
     tags: ["JavaScript", "HTML", "CSS", "DOM", "API", "Trivia Game"],
     github: "https://github.com/maimouna-mn/jeopardy-trivia-game",
     demo: "https://jeopardy-trivia-game.vercel.app/",
@@ -81,7 +33,7 @@ const PROJECTS = [
     title: "Course Management Platform",
     image:
       "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&q=80",
-    desc: "Full-stack platform for students and instructors, with bulk enrollment, scheduling, and authentication.",
+    desc: "A full-stack web and mobile platform that helps students and instructors manage courses, enrollment, and schedules. Features authentication, bulk student enrollment, responsive interfaces, and REST API integration using Angular, Laravel, Ionic, and Tailwind CSS.",
     tags: [
       "Angular",
       "Laravel",
@@ -92,22 +44,23 @@ const PROJECTS = [
     ],
     github: "https://github.com/maimouna-mn/Course-School-Management-Platform",
   },
-  {
-    title: "Inter-Network Money Transfer System",
-    image:
-      "https://images.unsplash.com/photo-1621504450181-5d356f61d307?w=600&q=80",
-    desc: "Secure cross-network transfer system with JSON payload validation, RESTful APIs, and database integration.",
-   tags: [
-  "Node.js",
-  "NestJS",
-  "MySQL",
-  "REST API",
-  "JSON",
-  "Backend"
-],
-    github:
-      "https://github.com/maimouna-mn/Inter-Network-Money-Transfer-System",
-  }
+  //   ,
+  //   {
+  //     title: "Inter-Network Money Transfer System",
+  //     image:
+  //       "https://images.unsplash.com/photo-1621504450181-5d356f61d307?w=600&q=80",
+  //     desc: "Secure cross-network transfer system with JSON payload validation, RESTful APIs, and database integration.",
+  //    tags: [
+  //   "Node.js",
+  //   "NestJS",
+  //   "MySQL",
+  //   "REST API",
+  //   "JSON",
+  //   "Backend"
+  // ],
+  //     github:
+  //       "https://github.com/maimouna-mn/Inter-Network-Money-Transfer-System",
+  //   }
 ];
 const VISIBLE_COUNT = 3;
 
@@ -148,7 +101,7 @@ export default function Projects() {
         </motion.div>
 
         <div className="projects-carousel">
-          <button
+          {/* <button
             className="carousel-arrow"
             onClick={goPrev}
             disabled={startIndex === 0}
@@ -162,7 +115,7 @@ export default function Projects() {
             >
               <path d="M15 18l-6-6 6-6" />
             </svg>
-          </button>
+          </button> */}
 
           <div className="projects-grid">
             <AnimatePresence mode="popLayout">
@@ -206,7 +159,7 @@ export default function Projects() {
             </AnimatePresence>
           </div>
 
-          <button
+          {/* <button
             className="carousel-arrow"
             onClick={goNext}
             disabled={startIndex >= maxIndex}
@@ -220,13 +173,9 @@ export default function Projects() {
             >
               <path d="M9 6l6 6-6 6" />
             </svg>
-          </button>
+          </button> */}
         </div>
       </div>
     </section>
   );
 }
-
-//  <a href="#" target="_blank" rel="noreferrer">
-//                       Live demo ↗
-//                     </a>
