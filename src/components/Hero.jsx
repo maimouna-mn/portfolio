@@ -115,7 +115,7 @@ export default function Hero() {
             <span className="corner tr"></span>
             <span className="corner bl"></span>
             <span className="corner br"></span>
-            <img src="/photo.jpg" alt="Maimouna Ndiaye" />
+            <img src="/profilPhoto.JPG" alt="Maimouna Ndiaye" />
           </div>
           <div className="label-strip">
             <span>FIG. MN—01</span>
