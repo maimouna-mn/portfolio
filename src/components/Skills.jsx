@@ -1,56 +1,70 @@
-import { motion } from 'framer-motion'
-import { fadeUp, staggerContainer, staggerItem, viewportOnce } from '../motion'
+import { motion } from "framer-motion";
+import { fadeUp, staggerContainer, staggerItem, viewportOnce } from "../motion";
 
 const SKILL_GROUPS = [
   {
-    category: 'Frontend',
+    category: "Frontend",
     skills: [
-      'React',
-      'Angular',
-      'TypeScript',
-      'JavaScript (ES6+)',
-      'HTML5',
-      'CSS3',
-      'Tailwind CSS',
+      "React",
+      "Angular",
+      "TypeScript",
+      "JavaScript (ES6+)",
+      "HTML5",
+      "CSS3",
+      "Tailwind CSS",
     ],
   },
   {
-    category: 'Backend',
-    skills: ['Node.js', 'NestJS', 'Laravel', 'PHP', 'REST APIs', 'JWT Authentication'],
-  },
-  {
-    category: 'Databases',
-    skills: ['MySQL', 'Firebase', 'SQL Server'],
-  },
-  {
-    category: 'Developer Tools',
+    category: "Backend",
     skills: [
-      'Git',
-      'GitHub',
-      'GitLab',
-      'Swagger',
-      'Postman',
-      'Jira',
-      'Trello',
-      'Slack',
-      'Discord',
+      "Node.js",
+      "NestJS",
+      "Laravel",
+      "PHP",
+      "REST APIs",
+      "JWT Authentication",
     ],
   },
-    {
-    category: 'Methodologies',
-    skills: ['Agile / Scrum', 'MVC Architecture', 'RBAC', 'SDLC'],
+  {
+    category: "Databases",
+    skills: ["MySQL", "Firebase", "SQL Server"],
   },
-   {
-  category: "Interests",
-  skills: [
-    "Personal Development",
-    "Reading",
-    "Scrabble",
-    "Travel",
-    "Entrepreneurship",
-  ],
-},
-]
+  {
+    category: "Developer Tools",
+    skills: [
+      "Git",
+      "GitHub",
+      "GitLab",
+      "Swagger",
+      "Postman",
+      "Jira",
+      "Trello",
+      "Slack",
+      "Discord",
+    ],
+  },
+  {
+    category: "Methodologies",
+    skills: [
+      "Agile / Scrum",
+      "MVC Architecture",
+      "Business Process Management (BPM)",
+      "Workflow Automation",
+      "RBAC",
+      "SDLC",
+    ],
+  },
+  {
+    category: "Interests",
+    skills: [
+      "Personal Development",
+      "Reading",
+      "Scrabble",
+      "Travel",
+      "Entrepreneurship",
+    ],
+  },
+];
 
 export default function Skills() {
   return (
@@ -76,7 +90,11 @@ export default function Skills() {
           viewport={viewportOnce}
         >
           {SKILL_GROUPS.map((group) => (
-            <motion.div className="skill-cell" key={group.category} variants={staggerItem}>
+            <motion.div
+              className="skill-cell"
+              key={group.category}
+              variants={staggerItem}
+            >
               <p className="skill-cat">{group.category}</p>
               <div className="chip-list">
                 {group.skills.map((skill) => (
@@ -90,5 +108,5 @@ export default function Skills() {
         </motion.div>
       </div>
     </section>
-  )
+  );
 }
